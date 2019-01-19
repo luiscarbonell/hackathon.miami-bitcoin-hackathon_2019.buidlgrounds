@@ -59,6 +59,12 @@ app.get("/address", function(req, res) {
   })
 })
 
+app.post('/user', function(req, res) {
+  res.json({
+    success: true
+  })
+})
+
 app.listen(PORT, function() {
   console.log("\nServer is listening on http://locahost:" + chalk.bold(PORT) + "\n")
 })
