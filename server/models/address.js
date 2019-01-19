@@ -9,11 +9,13 @@ let addressSchema = new mongoose.Schema({
   },
   address: {
     type: String,
-    required: true
+    required: true,
+    unique: true,
   },
   key: {
     type: String,
-    required: true
+    required: true,
+    unique: true
   }
 })
 
