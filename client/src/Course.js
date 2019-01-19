@@ -14,6 +14,7 @@ class Course extends Component {
       email: '',
     };
     this.getAddress = this.getAddress.bind(this);
+    this.handlePost = this.handlePost.bind(this);
   }
   componentDidMount() {
     this.getAddress();
@@ -23,18 +24,28 @@ class Course extends Component {
 
 
   getAddress() {
-    axios.get('http://localhost:8080/user')
-    .then(function (response) {
+    axios.get('http://localhost:8080/address')
+    .then((response) => {
       // handle success
       console.log(response);
     })
-    .catch(function (error) {
+    .catch((error) => {
       // handle error
       console.log(error);
     })
   }
 
   // post request 
+  handlePost() {
+    axios.post('/user', {
+      "email": "john.doe@gmail.com",
+      "address": "57a0bb45e41ffd9f095fd6eaecaf0139a33f1eba"
+    }).then(function(response) {
+      console.log("Response:", response.data)
+    }).catch(function(error) {
+      console.log("Error:", error)
+    })
+  }
 
 
 
