@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import Course from './Course.js'
 import './App.css';
+
 import {
   Link,
+  withRouter,
 } from 'react-router-dom';
 
 class App extends Component {
@@ -34,10 +36,9 @@ return (
 
          TO INFINITY AND BEYOND
 
-
-
-          <Link to={Course}>
-                
+          <Link className="btn" to={Course}>
+              whats app 
+    
           </Link>
 
        </div>
