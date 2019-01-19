@@ -4,6 +4,13 @@
   "description": "Teaching developers how to build BitCoin applications",
   "main": "index.js",
   "scripts": {
+    "postinstall": "npm run install:client && npm run install:server",
+    "start": "./node_modules/.bin/concurrently \"npm run serve:client\" \"npm run serve:server\"",
+    "build": "cd client && npm run build",
+    "serve:client": "cd client && npm start",
+    "serve:server": "cd server && npm start",
+    "install:client": "cd client.web && npm i",
+    "install:server": "cd server && npm i",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -13,8 +20,14 @@
   "keywords": [
     "bitcoin"
   ],
-  "author": "",
+  "contributors": [
+    "Claudio Atilano <claudio@metamesh.io>",
+    "Oriana Aristizabal <oriana@metamesh.io>",
+    "Gianfranco Colombi <giancolombi@gmail.com>",
+    "Luis Carbonell <luis@liquidcarrot.io>"
+  ],
   "license": "Apache-2.0",
+  "private": true,
   "bugs": {
     "url": "https://github.com/luiscarbonell/Miami_Bitcoin_Hackathon_Buidlgrounds/issues"
   },
