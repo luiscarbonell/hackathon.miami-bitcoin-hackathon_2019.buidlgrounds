@@ -8,7 +8,7 @@ let async = require('neo-async')
 let mongoose = require('mongoose')
 let cors = require('cors')
 let bitcore = require('bitcore-lib')
-let Message = require('bitcore-message')
+// let Message = require('bitcore-message')
 let bodyParser = require('body-parser')
 let Insight = require('bitcore-explorers').Insight
 

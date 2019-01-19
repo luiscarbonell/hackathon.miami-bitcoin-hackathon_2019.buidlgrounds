@@ -13,7 +13,6 @@
   "dependencies": {
     "bitcore-explorers": "^1.0.1",
     "bitcore-lib": "^0.16.0",
-    "bitcore-message": "^1.0.4",
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
     "dotenv": "^6.2.0",

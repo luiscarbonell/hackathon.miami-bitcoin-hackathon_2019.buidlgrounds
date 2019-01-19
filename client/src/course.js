@@ -23,12 +23,12 @@ class Course extends Component {
 
 
   getAddress() {
-    axios.get('http://localhost:8080/user')
-    .then(function (response) {
+    axios.get('http://localhost:8080/address')
+    .then((response) => {
       // handle success
       console.log(response);
     })
-    .catch(function (error) {
+    .catch((error) => {
       // handle error
       console.log(error);
     })
