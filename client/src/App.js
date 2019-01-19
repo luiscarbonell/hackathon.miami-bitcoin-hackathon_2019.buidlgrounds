@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import course from './course.js'
+import Course from './Course.js'
 import './App.css';
+import {
+  Link,
+} from 'react-router-dom';
 
 class App extends Component {
 
@@ -23,10 +26,17 @@ return (
        
        <div className='Banner'>
 
-       <link to={course}>
+       HELLO
 
-       
-       </link>
+       <div>
+
+          <Link to={Course}>
+                
+          </Link>
+
+       </div>
+
+      
 
 
        
