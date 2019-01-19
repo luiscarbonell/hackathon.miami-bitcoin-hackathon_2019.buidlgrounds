@@ -18,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/luiscarbonell/Miami_Bitcoin_Hackathon_Buidlgrounds/issues"
   },
-  "homepage": "https://github.com/luiscarbonell/Miami_Bitcoin_Hackathon_Buidlgrounds#readme"
+  "homepage": "https://github.com/luiscarbonell/Miami_Bitcoin_Hackathon_Buidlgrounds#readme",
+  "dependencies": {
+    "concurrently": "^4.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
 }
