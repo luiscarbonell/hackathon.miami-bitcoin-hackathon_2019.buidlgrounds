@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import Course from './Course.js'
 import './App.css';
+import boo from './Design.jpeg';
 
 import {
   Link,
@@ -10,31 +11,28 @@ import {
 
 class App extends Component {
 
+
+
+
   render() {
 return (
       <div className="App">
 
       WHATS APP
 
+    
+
        
        <div className='Banner'>
 
        HELLO
 
-       <div>
-
-         TO INFINITY AND BEYOND
-
-          
-
-       </div>
-
-      
-
-
        
-   
        </div>
+       <div className="jumbotron"> 
+       <img src={boo}/>
+       </div>
+       
 
 
 
