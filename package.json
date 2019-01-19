@@ -1,0 +1,22 @@
+{
+  "name": "buidlgrounds",
+  "version": "1.0.0",
+  "description": "Teaching developers how to build BitCoin applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luiscarbonell/Miami_Bitcoin_Hackathon_Buidlgrounds.git"
+  },
+  "keywords": [
+    "bitcoin"
+  ],
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/luiscarbonell/Miami_Bitcoin_Hackathon_Buidlgrounds/issues"
+  },
+  "homepage": "https://github.com/luiscarbonell/Miami_Bitcoin_Hackathon_Buidlgrounds#readme"
+}
