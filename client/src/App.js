@@ -23,15 +23,14 @@ return (
        
        <div className='Banner'>
 
+       <link to={course}>
+
+       
+       </link>
+
 
        
    
-        <div>
-
-
-         
-        </div>
-
        </div>
 
 
