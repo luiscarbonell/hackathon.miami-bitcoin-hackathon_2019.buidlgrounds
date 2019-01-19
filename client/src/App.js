@@ -10,17 +10,6 @@ import {
 
 class App extends Component {
 
-
-
-
-
-
-
-
-
-
-
-
   render() {
 return (
       <div className="App">
@@ -36,10 +25,7 @@ return (
 
          TO INFINITY AND BEYOND
 
-          <Link className="btn" to={Course}>
-              whats app 
-    
-          </Link>
+          
 
        </div>
 
