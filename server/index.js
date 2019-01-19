@@ -6,6 +6,7 @@ let faker = require('faker')
 let express = require('express')
 let async = require('neo-async')
 let mongoose = require('mongoose')
+let cors = require('cors')
 let bitcore = require('bitcore-lib')
 let Message = require('bitcore-message')
 let bodyParser = require('body-parser')
@@ -19,6 +20,8 @@ mongoose.connect("mongodb://localhost:27017")
 let app = express()
 
 let PORT = process.env.PORT || 8080
+
+app.use(cors())
 
 /**
 * @res {Object}
