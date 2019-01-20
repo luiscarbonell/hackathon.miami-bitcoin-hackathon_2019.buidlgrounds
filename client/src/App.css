@@ -18,8 +18,38 @@
   color: white;
 }
 
+
+
 .App-link {
   color: #61dafb;
+}
+
+.App img{
+  box-shadow: 0 2px 19px 4px rgba(0, 0, 0, 0.14);
+  border-radius: 10px;
+  width: 45%;
+
+  
+}
+
+.App h1 {
+  font-family: 'Nunito Sans', sans-serif;
+  padding: 5px;
+  font-size:
+}
+
+.App h3 {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.btn-danger {
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #FF5C5F;
+  border-color: #FF5C5F;
+  padding: 15px;
+  border-radius: 25px;
+
 }
 
 @keyframes App-logo-spin {
