@@ -42,8 +42,30 @@ p, li {
 .App h3 {
   font-family: 'Nunito Sans', sans-serif;
 }
-
+#cardTitle{
+  color: black;
+}
+#cardTitle:hover {
+  color: black;
+}
+.toCourse .course{
+  margin-bottom: 20px;
+}
+#coursePrice{
+  color: white;
+    background-color: lightgreen;
+    width: 100px;
+    position: absolute;
+    font-size: 15px;
+    top: 82%;
+    border-radius: 5px;
+    left: 68%;
+}
+.toCourse p{
+  color: #888
+}
 .btn-danger {
+
   font-size: 16px;
   font-weight: 600;
   background-color: #FF5C5F;

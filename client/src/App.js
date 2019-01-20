@@ -24,7 +24,7 @@ return (
           <h4>Build Bitcoin applications, directly from your browser.</h4>
         </div>
         <div>
-          <a href='#Lessons' role= "button" className= "btn btn-danger"> Start learning</a>
+          <a id="toLessons" href='#Lessons' role= "button" className= "btn btn-danger"> Start learning</a>
         </div>
         <div className= " img">
           <img src= {Banner}/>
@@ -34,19 +34,43 @@ return (
         <div className="col-xs-12" id="Lessons">
             <div className="toCourse col-xs-12">
               <a href="/rpi">
-              <div className="col-xs-4"><img style={{width: '100%'}} src={rpi} />you
-                <h4>Raspberry Pi Bitcoin Node</h4>
+              <div className="col-xs-4">
+              <div className="course col-xs-12">
+              <img style={{width: '100%'}} src={rpi} />
+                <span id="coursePrice">
+                <b >FREE</b>
+                </span>
+              </div>
+              
+                
+                <h4 id="cardTitle">Raspberry Pi Bitcoin Node</h4>
+                <p>Sync with the Bitcoin network with your own Raspberry Pi.</p>
               </div></a>
               <a href='/py'>
-              <div className="col-xs-4"><img style={{width: '100%'}} src={py} />
-                <h4>Python Bitcoin Sandbox</h4>
+              <div className="col-xs-4">
+              <div className=" course col-xs-12">
+              <img style={{width: '100%'}} src={py} />
+              <span id="coursePrice">
+                <b >FREE</b>
+                </span>
+              </div>
+              
+                <h4 id="cardTitle">Python Bitcoin Sandbox</h4>
                 <p>Are you a Python developer who is looking to get your feet wet with Bitcoin? Now you can start building Bitcoin applications using the BuildGrounds Python Sandbox. You won’t have to worry about downloading anything, simply click below and get started hacking!</p>
 
               </div></a>
               <a href='/course'>
-              <div className="col-xs-4"><img style={{width: '100%'}} src={btc} />
-                <h4>Buidl Bootcamp</h4>
-                <p>by Justin Moon</p>
+              <div className="col-xs-4">
+              <div className="course col-xs-12" >
+              <img style={{width: '100%'}} src={btc} />
+              <span style={{ backgroundColor: '#f7930b'}} id="coursePrice">
+                <b >0.005 BTC</b>
+                </span>
+              </div>
+              
+                <h4 id="cardTitle">Buidl Bootcamp</h4>
+                <p>This code along bootcamp by Justin Moon will get you to understand Bitcoin at its core level. With 10 hours filled of coding and advanced cryptographic concepts.</p>
+                
               </div></a>
               
             </div>

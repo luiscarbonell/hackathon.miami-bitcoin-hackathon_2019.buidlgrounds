@@ -83,7 +83,7 @@ class Course extends Component {
         <h4> By: Justin Moon</h4>       
         <div  className="col-xs-12">
         <div style={{ textAlign: 'left', marginLeft: '25%'}} className="col-xs-6">
-        <p>Want to build a mini Bitcoin blockchain from scratch? Well then this course is for you! To be able to take this course you must: </p>
+        <p>Want to build a mini Bitcoin blockchain from scratch? Well then this course is for you! Learn bitcoin fundamentals, go from the basics to create your very own blockchain. To be able to take this course you must: </p>
         </div>
         <div style={{ textAlign: 'left', marginLeft: '30%'}} className="col-xs-12">
         <ul>
@@ -110,11 +110,18 @@ class Course extends Component {
 
           </div>
           <div style={{ backgroundColor: '#fedb67', paddingTop: '25px', paddingBottom: '25px'}} className="col-xs-12">
-          <div style={{ backgroundColor: '#fedb67', textAlign: 'right'}} className="col-xs-6">
-            <QRCode value={this.state.address} />
-            <p>Send 0.005 BTC</p>
+          <div style={{ backgroundColor: '#fedb67', textAlign: 'left'}} className="col-xs-6">
+            <h4>Take the following steps to get access to the course</h4>
+            <ol>
+              <li>Type your email under the QR Code</li>
+              <li>Submit your email.</li>
+              <li>Send 0.005BTC to the unique address show to the right.</li>
+            </ol>
+            <p>Be sure to submit your email before you pay for the course. After your payment is confirmed then you will be emailed the password and notebook for your course.</p>
           </div>
-          <div style={{ backgroundColor: '#fedb67', textAlign: 'left', marginTop: '50px'}} className="col-xs-6">
+          <div style={{ backgroundColor: '#fedb67', textAlign: 'center'}} className="col-xs-6">
+          <QRCode value={this.state.address} />
+            <p>Send 0.005 BTC</p>
             <input style={{ width: '300px', height: '30px', borderRadius: '5px', border: '0px'}} id="emailSubmit" />
             <a className="btn" id="submitForm" onClick={this.handlePost} >Submit</a>
           </div>
