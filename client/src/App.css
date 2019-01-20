@@ -35,7 +35,10 @@
   font-family: 'Nunito Sans', sans-serif;
   padding: 5px;
 }
-
+p, li {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+}
 .App h3 {
   font-family: 'Nunito Sans', sans-serif;
 }
@@ -60,4 +63,15 @@
   to {
     transform: rotate(360deg);
   }
+}
+#emailSubmit:focus{
+  outline: none;
+}
+#submitForm {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-left: 10px;
+  background-color: white;
+  color: black;
+  font-family: 'Nunito Sans', sans-serif;
 }
