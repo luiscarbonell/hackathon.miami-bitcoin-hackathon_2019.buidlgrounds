@@ -52,4 +52,5 @@ Example Response:
 | --- | --- | --- |
 | SMTP\_EMAIL | `buidlgrounds@gmail.com` | Default sender email for email verifications |
 | SMTP\_PASSWORD |  | Password for `SMTP_EMAIL` |
+| NODE\_ENV | `development` | Node.js environment |
 | DB\_URL | `mongodb://localhost/pastelito` | MongoDB URL |

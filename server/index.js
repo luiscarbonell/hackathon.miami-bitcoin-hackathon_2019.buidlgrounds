@@ -2,6 +2,7 @@
 
 let dotenv = require('dotenv').config()
 let _ = require('lodash')
+let path = require('path')
 let logger = require('morgan')
 let chalk = require('chalk')
 let faker = require('faker')
@@ -29,6 +30,10 @@ let PORT = process.env.PORT || 8080
 app.use(cors())
 app.use(bodyParser.json())
 app.use(logger('dev'))
+
+if(process.env.NODE_ENV === "production") {
+  app.use(express.static(path.resolve(__dirname, "../client/build")))
+}
 
 /**
 * @res {Object}
@@ -106,6 +111,12 @@ app.post('/user', function(req, res) {
   })
 })
 
-app.listen(PORT, function() {
-  console.log("\nServer is listening on http://locahost:" + chalk.bold(PORT) + "\n")
-})
+if(process.env.NODE_ENV === "production") {
+  app.listen(80, function() {
+    console.log("\nServer is listening on http://locahost:" + chalk.bold(80) + "\n")
+  })
+} else {
+  app.listen(PORT, function() {
+    console.log("\nServer is listening on http://locahost:" + chalk.bold(PORT) + "\n")
+  })
+}

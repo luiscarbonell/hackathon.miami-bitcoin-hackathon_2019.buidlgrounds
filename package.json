@@ -9,6 +9,8 @@
     "build": "cd client && npm run build",
     "serve:client": "cd client && npm start",
     "serve:server": "cd server && npm start",
+    "preserve:production": "npm run build",
+    "serve:production": "cd server && npm run serve:production",
     "install:client": "cd client && npm i",
     "install:server": "cd server && npm i",
     "test": "echo \"Error: no test specified\" && exit 1"
