@@ -26,11 +26,19 @@ return (
         <div>
           <a id="toLessons" href='#Lessons' role= "button" className= "btn btn-danger"> Start learning</a>
         </div>
+       
         <div className= " img">
           <img src= {Banner}/>
           <p></p>
           <p></p>
-          <h2>Welcome to BuidlGrounds</h2>
+        </div>
+
+        <div className="HowItWorks col-md-12">
+          
+        </div>
+
+        <div>
+        <h2>Courses</h2>
         </div>
 
 
