@@ -12,6 +12,7 @@ class Navbar extends Component {
         <div className="col-xs-12">
           <div className="col-xs-2">
           <a href="/">
+
           <img style={{ boxShadow: 'none', marginBottom: '25px'}} src={logo} />
           </a>
           </div>

@@ -37,7 +37,14 @@ return (
         <div className="col-xs-12" id="Lessons">
             <div className="toCourse col-xs-12">
               <a href="/rpi">
-              <div className="col-xs-4"><img style={{width: '100%'}} src={rpi} />  
+              <div className="col-xs-4">
+              <div className="course col-xs-12">
+              <img style={{width: '100%'}} src={rpi} />  
+              <span id="coursePrice">
+                <b >FREE</b>
+                </span>
+              </div>
+              
                 <h4 id="cardTitle"> DIY Raspberry Pi Bitcoin Node</h4>
                 <p>A tutorial for installing Bitcoin Core nodes on a Raspberry Pi
 Participate in the Bitcoin, Litecoin, or Ethereum network
