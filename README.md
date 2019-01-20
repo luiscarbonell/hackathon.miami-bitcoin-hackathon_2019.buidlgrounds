@@ -43,3 +43,12 @@ Example Response:
   "address": "57a0bb45e41ffd9f095fd6eaecaf0139a33f1eba"
 }
 ```
+
+## Backend Environment Variables
+
+**`.env` Variables**
+
+| Name | Default | Description |
+| --- | --- | --- |
+| SMTP\_EMAIL | `buidlgrounds@gmail.com` | Default sender email for email verifications |
+| SMTP\_PASSWORD |  | Password for `SMTP_EMAIL` |
