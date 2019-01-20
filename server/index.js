@@ -16,7 +16,7 @@ let Insight = require('bitcore-explorers').Insight
 let Address = require('./models/address')
 let User = require('./models/user')
 
-mongoose.connect("mongodb://localhost:27017")
+mongoose.connect("mongodb://localhost:27017/pastelitos")
 
 let app = express()
 
