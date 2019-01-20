@@ -7,6 +7,10 @@ let userSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  paid: {
+    type: Boolean,
+    default: false
+  },
   address: {
     type: mongoose.Schema.Types.ObjectId,
     required: true,

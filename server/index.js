@@ -2,6 +2,7 @@
 
 let dotenv = require('dotenv').config()
 let _ = require('lodash')
+let logger = require('morgan')
 let chalk = require('chalk')
 let faker = require('faker')
 let express = require('express')
@@ -16,7 +17,10 @@ let Insight = require('bitcore-explorers').Insight
 let Address = require('./models/address')
 let User = require('./models/user')
 
-mongoose.connect("mongodb://localhost:27017/pastelitos")
+mongoose.connect("mongodb://localhost:27017/pastelitos", {
+  useNewUrlParser: true,
+  useCreateIndex: true
+})
 
 let app = express()
 
@@ -24,6 +28,7 @@ let PORT = process.env.PORT || 8080
 
 app.use(cors())
 app.use(bodyParser.json())
+app.use(logger('dev'))
 
 /**
 * @res {Object}
@@ -58,7 +63,7 @@ app.get("/address", function(req, res) {
       res.status(500).send(error)
     } else {
       res.json({
-        address: JSON.parse(JSON.stringify(results.address)).hash
+        address: results.store.address
       })
     }
   })
@@ -69,17 +74,28 @@ app.get("/address", function(req, res) {
 * @req.body {String} address - Course BTC Wallet
 */
 app.post('/user', function(req, res) {
+  
   async.auto({
     "address": function(callback) {
       Address.findOne({
-       address: res.body.address
-      }, callback)
+       address: req.body.address
+      }, function(error, address) {
+        console.log(error)
+        console.log(address)
+        callback(error, address)
+      })
     },
     "user": ["address", function(results, callback) {
+      console.log(results.address)
+      
       User.create({
         email: req.body.email,
         address: results.address.id
       }, callback)
+    }],
+    "update": ["address", "user", function(results, callback) {
+      results.address.user = results.user.id
+      results.address.save(callback)
     }]
   }, function(error, results) {
     if(error) {
