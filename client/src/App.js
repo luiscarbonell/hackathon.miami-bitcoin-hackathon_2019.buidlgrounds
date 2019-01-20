@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import Course from './course.js'
+import Course from './Course.js'
 import './App.css';
 import boo from './Design.jpeg';
 
