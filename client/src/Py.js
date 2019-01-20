@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Navbar from './Navbar';
+import headImg from './assets/rpiNode.png';
 import {
   Link,
 } from 'react-router-dom';
@@ -80,8 +81,12 @@ class Py extends Component {
         </button>
 
         <div>
-          
-
+          <p></p>
+          <h1>Welcome to the BuidlGrounds Python Sandbox</h1>
+          <p>The BuidlGrounds Sandbox allows you to play around with Bitcoin without the risk of losing Bitcoin in the process.
+If you are begging to develop on Python and have previously used the Jupyter Notebook this is a great way for you to start building Bitcoin applications.</p>
+          <h1>What is a Sandbox</h1>
+          <p>Sandboxing is an important security technique that isolates programs, preventing malicious or malfunctioning programs from damaging or snooping on the rest of your computer. The software you use is already sandboxing much of the code you run every day.</p>
         </div>
 
        
