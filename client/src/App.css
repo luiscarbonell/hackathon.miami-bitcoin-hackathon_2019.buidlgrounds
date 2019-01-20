@@ -28,14 +28,12 @@
   box-shadow: 0 2px 19px 4px rgba(0, 0, 0, 0.14);
   border-radius: 10px;
   width: 45%;
-
-  
+  margin-top: 25px;
 }
 
 .App h1 {
   font-family: 'Nunito Sans', sans-serif;
   padding: 5px;
-  font-size:
 }
 
 .App h3 {
