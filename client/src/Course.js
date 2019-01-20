@@ -15,6 +15,7 @@ class Course extends Component {
     };
     this.getAddress = this.getAddress.bind(this);
     this.handlePost = this.handlePost.bind(this);
+    this.handleEmail = this.handleEmail.bind(this);
   }
   componentDidMount() {
     this.getAddress();
@@ -27,7 +28,8 @@ class Course extends Component {
     axios.get('http://localhost:8080/address')
     .then((response) => {
       // handle success
-      console.log(response);
+      console.log("Address: " + response.data.address);
+      this.setState({ address: response.data.address });
     })
     .catch((error) => {
       // handle error
@@ -36,24 +38,44 @@ class Course extends Component {
   }
 
   // post request 
+
+  handleEmail(event) {
+    let self = this;
+    self.setState({
+        email: event.target.email
+        
+    }  ); 
+
+} 
+
+
+ 
   handlePost() {
-    axios.post('/user', {
-      "email": "john.doe@gmail.com",
-      "address": "57a0bb45e41ffd9f095fd6eaecaf0139a33f1eba"
-    }).then(function(response) {
-      console.log("Response:", response.data)
-    }).catch(function(error) {
-      console.log("Error:", error)
+    axios.post('http://localhost:8080/user', {
+      "email": this.state.email,
+      "address": this.state.address
+    }).then((response) => {
+      console.log("Response:", response.data);
+    }).catch((error) => {
+      console.log("Error:", error);
     })
   }
 
 
+  
+  
 
 
   render() {
     return (
       <div className="App">
         <h1>course</h1>
+
+        <input  id="email1"  onChange={this.handleEmail} />
+
+        <button onClick={this.handlePost}>
+            Get Response
+        </button>
 
         <div>
           
