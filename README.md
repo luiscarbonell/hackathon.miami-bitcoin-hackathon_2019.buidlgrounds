@@ -52,3 +52,4 @@ Example Response:
 | --- | --- | --- |
 | SMTP\_EMAIL | `buidlgrounds@gmail.com` | Default sender email for email verifications |
 | SMTP\_PASSWORD |  | Password for `SMTP_EMAIL` |
+| DB\_URL | `mongodb://localhost/pastelito` | MongoDB URL |

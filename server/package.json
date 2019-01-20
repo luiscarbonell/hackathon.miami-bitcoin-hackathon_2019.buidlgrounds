@@ -11,6 +11,7 @@
   "author": "",
   "license": "Apache-2.0",
   "dependencies": {
+    "bitcoin-transaction": "^1.2.1",
     "bitcore-explorers": "^1.0.1",
     "bitcore-lib": "^0.16.0",
     "body-parser": "^1.18.3",
