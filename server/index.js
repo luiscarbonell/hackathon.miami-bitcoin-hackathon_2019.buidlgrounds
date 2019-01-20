@@ -1,6 +1,7 @@
 'use strict'
 
 let dotenv = require('dotenv').config()
+let _ = require('lodash')
 let chalk = require('chalk')
 let faker = require('faker')
 let express = require('express')
@@ -22,6 +23,7 @@ let app = express()
 let PORT = process.env.PORT || 8080
 
 app.use(cors())
+app.use(bodyParser.json())
 
 /**
 * @res {Object}
@@ -62,9 +64,29 @@ app.get("/address", function(req, res) {
   })
 })
 
+/**
+* @req.body {String} email - User's Email
+* @req.body {String} address - Course BTC Wallet
+*/
 app.post('/user', function(req, res) {
-  res.json({
-    success: true
+  async.auto({
+    "address": function(callback) {
+      Address.findOne({
+       address: res.body.address
+      }, callback)
+    },
+    "user": ["address", function(results, callback) {
+      User.create({
+        email: req.body.email,
+        address: results.address.id
+      }, callback)
+    }]
+  }, function(error, results) {
+    if(error) {
+      res.status(500).send(error)
+    } else {
+      res.json(_.pick(results.user, "id", "email", "address"))
+    }
   })
 })
 

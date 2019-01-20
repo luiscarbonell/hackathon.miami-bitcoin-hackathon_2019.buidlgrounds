@@ -5,7 +5,7 @@ let mongoose = require('mongoose')
 let userSchema = new mongoose.Schema({
   email: {
     type: String,
-    requierd: true
+    required: true
   },
   address: {
     type: mongoose.Schema.Types.ObjectId,

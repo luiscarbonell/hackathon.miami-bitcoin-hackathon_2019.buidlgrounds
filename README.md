@@ -38,6 +38,8 @@ Example Response:
 
 ```json
 {
-  "success": true
+  "id": "jkoM5ep8TK84ZO2fxxnvdW5EdpM5GYZl",
+  "email": "john.doe@gmail.com",
+  "address": "57a0bb45e41ffd9f095fd6eaecaf0139a33f1eba"
 }
 ```
