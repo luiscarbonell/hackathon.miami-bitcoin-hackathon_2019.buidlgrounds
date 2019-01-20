@@ -18,8 +18,42 @@
   color: white;
 }
 
+
+
 .App-link {
   color: #61dafb;
+}
+
+.App img{
+  box-shadow: 0 2px 19px 4px rgba(0, 0, 0, 0.14);
+  border-radius: 10px;
+  width: 45%;
+  margin-top: 25px;
+}
+
+.App h1 {
+  font-family: 'Nunito Sans', sans-serif;
+  padding: 5px;
+}
+p, li {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+}
+.App h3 {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.btn-danger {
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #FF5C5F;
+  border-color: #FF5C5F;
+  padding: 15px;
+  border-radius: 25px;
+
+}
+#Lessons{
+  margin-bottom: 50px;
 }
 
 @keyframes App-logo-spin {
@@ -29,4 +63,15 @@
   to {
     transform: rotate(360deg);
   }
+}
+#emailSubmit:focus{
+  outline: none;
+}
+#submitForm {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-left: 10px;
+  background-color: white;
+  color: black;
+  font-family: 'Nunito Sans', sans-serif;
 }
