@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import Banner from './Banner.png';
-import Course from './Course.js'
+import Navbar from './Navbar';
 import './App.css';
 import boo from './Design.jpeg';
-import rpi from './assets/rpibtc.jpg';
+import rpi from './assets/rpi.png';
+import btc from './assets/btcCourse.png';
+import py from './assets/py.png';
 
 import {
   Link,
@@ -16,6 +18,7 @@ class App extends Component {
   render() {
 return (
       <div className="App">
+        <Navbar />
         <div>
           <h1> Bitcoin, simple and easy </h1>
           <h4>Bitcoin for developers, directly from your browser</h4>
@@ -30,13 +33,20 @@ return (
 
         <div className="col-xs-12" id="Lessons">
             <div className="toCourse col-xs-12">
-              <img style={{width: '60%'}} src={rpi} />
-            </div>
-            <div className="toCourse col-xs-12">
-            <img style={{width: '60%'}} src={rpi} />
-            </div>
-            <div className="toCourse col-xs-12">
-            <img style={{width: '60%'}} src={rpi} />
+              <a href="/rpi">
+              <div className="col-xs-4"><img style={{width: '100%'}} src={rpi} />
+                <h4>Raspberry Pi Bitcoin Node</h4>
+              </div></a>
+              <a href='/py'>
+              <div className="col-xs-4"><img style={{width: '100%'}} src={py} />
+                <h4>Python Bitcoin Sandbox</h4>
+              </div></a>
+              <a href='/course'>
+              <div className="col-xs-4"><img style={{width: '100%'}} src={btc} />
+                <h4>Buidl Bootcamp</h4>
+                <p>by Justin Moon</p>
+              </div></a>
+              
             </div>
         </div>
       </div>

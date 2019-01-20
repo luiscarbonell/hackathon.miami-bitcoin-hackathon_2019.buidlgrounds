@@ -49,6 +49,9 @@
   border-radius: 25px;
 
 }
+#Lessons{
+  margin-bottom: 50px;
+}
 
 @keyframes App-logo-spin {
   from {

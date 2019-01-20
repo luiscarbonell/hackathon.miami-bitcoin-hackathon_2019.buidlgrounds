@@ -7,7 +7,7 @@ import {
 import logo from './logo.svg';
 import './App.css';
 
-class Course extends Component {
+class Py extends Component {
   constructor() {
     super();
     this.state = {
@@ -70,8 +70,8 @@ class Course extends Component {
   render() {
     return (
       <div className="App">
-      <Navbar />
-        <h1>course</h1>
+        <Navbar />
+        <h1>Py</h1>
 
         <input  id="email1"  onChange={this.handleEmail} />
 
@@ -90,4 +90,4 @@ class Course extends Component {
   }
 }
 
-export default Course;
+export default Py;
